@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ML_AR_UI_Kit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ig0-01-eSE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OtW-In-hmA">
+                                <rect key="frame" x="0.0" y="20" width="375" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="urt-A9-rfn"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="y4p-uy-Yh0" kind="embed" id="UUI-QG-WxG"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OtW-In-hmA" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="2M5-NG-mWb"/>
+                            <constraint firstItem="Ig0-01-eSE" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="3W4-Dd-DuG"/>
+                            <constraint firstItem="OtW-In-hmA" firstAttribute="top" secondItem="fQZ-KI-GVf" secondAttribute="top" id="5Mz-jT-Vjh"/>
+                            <constraint firstItem="Ig0-01-eSE" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="Aua-hO-I8P"/>
+                            <constraint firstItem="Ig0-01-eSE" firstAttribute="bottom" secondItem="U0K-SW-4ec" secondAttribute="bottom" id="Ldj-wJ-wGM"/>
+                            <constraint firstItem="Ig0-01-eSE" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="Vrh-k4-Odq"/>
+                            <constraint firstItem="OtW-In-hmA" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="Z2T-lG-rhf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="Ig0-01-eSE" id="QlH-7B-fho"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4727.1999999999998" y="149.77511244377811"/>
+        </scene>
+        <!--Status View Controller-->
+        <scene sceneID="0Je-lh-Khx">
+            <objects>
+                <viewController id="y4p-uy-Yh0" customClass="StatusViewController" customModule="ML_AR_UI_Kit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yPS-iX-eRr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lro-a0-EjJ" userLabel="Restart Experience Button Icon">
+                                <rect key="frame" x="325" y="27.5" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="yIH-iy-boT"/>
+                                    <constraint firstAttribute="height" constant="30" id="zpo-MM-zcI"/>
+                                </constraints>
+                                <state key="normal" image="restart"/>
+                                <state key="highlighted" image="restart"/>
+                                <connections>
+                                    <action selector="restartExperience:" destination="y4p-uy-Yh0" eventType="touchUpInside" id="ciP-jT-xmF"/>
+                                </connections>
+                            </button>
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDf-9w-Der">
+                                <rect key="frame" x="20" y="12" width="57.5" height="61"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrF-mL-FCu">
+                                        <rect key="frame" x="8" y="8" width="41.5" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="mrF-mL-FCu" firstAttribute="top" secondItem="RDf-9w-Der" secondAttribute="top" constant="8" id="1aF-lE-e6v"/>
+                                    <constraint firstAttribute="bottom" secondItem="mrF-mL-FCu" secondAttribute="bottom" constant="8" id="NE9-ic-Imn"/>
+                                    <constraint firstItem="mrF-mL-FCu" firstAttribute="leading" secondItem="RDf-9w-Der" secondAttribute="leading" constant="8" id="u3i-Wc-2ky"/>
+                                    <constraint firstAttribute="trailing" secondItem="mrF-mL-FCu" secondAttribute="trailing" constant="8" id="zao-5v-mUX"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lro-a0-EjJ" firstAttribute="centerY" secondItem="yPS-iX-eRr" secondAttribute="centerY" id="SEn-wv-gb3"/>
+                            <constraint firstItem="RDf-9w-Der" firstAttribute="leading" secondItem="5Vk-NO-ylT" secondAttribute="leading" constant="20" id="Szo-gl-lrb"/>
+                            <constraint firstItem="lro-a0-EjJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RDf-9w-Der" secondAttribute="trailing" constant="20" id="WX9-cO-Xcc"/>
+                            <constraint firstItem="RDf-9w-Der" firstAttribute="top" secondItem="5Vk-NO-ylT" secondAttribute="top" constant="12" id="iqD-7t-dBB"/>
+                            <constraint firstItem="5Vk-NO-ylT" firstAttribute="bottom" secondItem="RDf-9w-Der" secondAttribute="bottom" constant="12" id="jhZ-SE-QUP"/>
+                            <constraint firstItem="5Vk-NO-ylT" firstAttribute="trailing" secondItem="lro-a0-EjJ" secondAttribute="trailing" constant="20" id="mtQ-zA-2pf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5Vk-NO-ylT"/>
+                    </view>
+                    <connections>
+                        <outlet property="restartSessionButton" destination="lro-a0-EjJ" id="V2h-65-pMn"/>
+                        <outlet property="statusLabel" destination="mrF-mL-FCu" id="YK9-4u-1TQ"/>
+                        <outlet property="statusView" destination="RDf-9w-Der" id="0fa-nf-rZB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="azh-bK-AhR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4727" y="-264"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="restart" width="192" height="192"/>
+    </resources>
+</document>

@@ -15,6 +15,8 @@
 		A422559F2245867000C937D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A422559D2245867000C937D3 /* LaunchScreen.storyboard */; };
 		A42255AA2245867000C937D3 /* ML_AR_UI_KitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42255A92245867000C937D3 /* ML_AR_UI_KitTests.swift */; };
 		A42255B52245867000C937D3 /* ML_AR_UI_KitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42255B42245867000C937D3 /* ML_AR_UI_KitUITests.swift */; };
+		A42255C5224589BF00C937D3 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42255C4224589BF00C937D3 /* StatusViewController.swift */; };
+		A42255C722458D9600C937D3 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A42255C622458D9600C937D3 /* Inceptionv3.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		A42255B02245867000C937D3 /* ML_AR_UI_KitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ML_AR_UI_KitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A42255B42245867000C937D3 /* ML_AR_UI_KitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ML_AR_UI_KitUITests.swift; sourceTree = "<group>"; };
 		A42255B62245867000C937D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A42255C4224589BF00C937D3 /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatusViewController.swift; path = ML_AR_UI_Kit/Controller/StatusViewController.swift; sourceTree = SOURCE_ROOT; };
+		A42255C622458D9600C937D3 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +103,10 @@
 		A42255912245866F00C937D3 /* ML_AR_UI_Kit */ = {
 			isa = PBXGroup;
 			children = (
+				A42255C622458D9600C937D3 /* Inceptionv3.mlmodel */,
 				A42255922245866F00C937D3 /* AppDelegate.swift */,
-				A42255942245866F00C937D3 /* art.scnassets */,
-				A42255962245866F00C937D3 /* ViewController.swift */,
-				A42255982245866F00C937D3 /* Main.storyboard */,
-				A422559B2245867000C937D3 /* Assets.xcassets */,
-				A422559D2245867000C937D3 /* LaunchScreen.storyboard */,
+				A42255C32245870C00C937D3 /* Controller */,
+				A42255C2224586F100C937D3 /* View */,
 				A42255A02245867000C937D3 /* Info.plist */,
 			);
 			path = ML_AR_UI_Kit;
@@ -126,6 +128,26 @@
 				A42255B62245867000C937D3 /* Info.plist */,
 			);
 			path = ML_AR_UI_KitUITests;
+			sourceTree = "<group>";
+		};
+		A42255C2224586F100C937D3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A42255982245866F00C937D3 /* Main.storyboard */,
+				A422559D2245867000C937D3 /* LaunchScreen.storyboard */,
+				A42255942245866F00C937D3 /* art.scnassets */,
+				A422559B2245867000C937D3 /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A42255C32245870C00C937D3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A42255962245866F00C937D3 /* ViewController.swift */,
+				A42255C4224589BF00C937D3 /* StatusViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +283,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A42255972245866F00C937D3 /* ViewController.swift in Sources */,
+				A42255C722458D9600C937D3 /* Inceptionv3.mlmodel in Sources */,
+				A42255C5224589BF00C937D3 /* StatusViewController.swift in Sources */,
 				A42255932245866F00C937D3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +463,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4V9L8PFAZ4;
 				INFOPLIST_FILE = ML_AR_UI_Kit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,6 +482,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4V9L8PFAZ4;
 				INFOPLIST_FILE = ML_AR_UI_Kit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
