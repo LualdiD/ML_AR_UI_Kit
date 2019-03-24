@@ -33,9 +33,14 @@ class InfoNodeView: UINibView {
         DispatchQueue.main.async {
             self.textView.text = self.descriptionText
             self.imageView.sd_setImage(with: URL(string: self.imageUrl)) { (image, error, cache, url) in }
+            
         }
         
         self.setupPaperSwitch()
+    }
+    
+    override func layoutSubviews() {
+        textView.setContentOffset(CGPoint.zero, animated: false)
     }
     
     func setupPaperSwitch() {
