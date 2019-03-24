@@ -305,6 +305,53 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, ARSCNViewDe
     }
     
     
+    //MARK: - Drag and Drop
+    var zDepth: Float!
+    var selectedNode: SCNNode!
+    
+    var startingTouchLocation: CGPoint?
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first!
+        if let hit = sceneView.hitTest(touch.location(in: sceneView), options: nil).first {
+            selectedNode = hit.node
+            zDepth = sceneView.projectPoint(selectedNode.position).z
+            
+            let location = touch.location(in: sceneView)
+            startingTouchLocation = location
+        }
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        let touch = touches.first!
+        
+        //add a minumum range of movement to avoid unintentional drag
+        let minValue: CGFloat = 30
+        guard let startingLocation = startingTouchLocation else { return }
+        
+        guard touch.location(in: sceneView).y < startingLocation.y - minValue ||
+            touch.location(in: sceneView).y > startingLocation.y + minValue ||
+            touch.location(in: sceneView).x < startingLocation.x - minValue ||
+            touch.location(in: sceneView).x > startingLocation.x + minValue else { return  }
+        
+        guard selectedNode != nil else { return }
+
+        let touchPoint = touch.location(in: sceneView)
+        selectedNode.position = sceneView.unprojectPoint(
+            SCNVector3(x: Float(touchPoint.x),
+                       y: Float(touchPoint.y),
+                       z: zDepth))
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        selectedNode = nil
+    }
+    
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        selectedNode = nil
+    }
     
     
     // MARK: - ARSessionDelegate ------------------------
