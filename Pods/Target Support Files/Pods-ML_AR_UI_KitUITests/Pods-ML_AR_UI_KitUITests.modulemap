@@ -1,0 +1,6 @@
+framework module Pods_ML_AR_UI_KitUITests {
+  umbrella header "Pods-ML_AR_UI_KitUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
