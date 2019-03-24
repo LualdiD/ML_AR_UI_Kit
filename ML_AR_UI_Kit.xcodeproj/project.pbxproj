@@ -15,6 +15,7 @@
 		A41041EF224706E600EA4D40 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41041EE224706E600EA4D40 /* Extensions.swift */; };
 		A41041F422470D5500EA4D40 /* TagNodesInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41041F322470D5500EA4D40 /* TagNodesInView.swift */; };
 		A41041F622471C4000EA4D40 /* InfoNodesInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41041F522471C4000EA4D40 /* InfoNodesInView.swift */; };
+		A41041FA224761AA00EA4D40 /* RAMPaperSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41041F9224761AA00EA4D40 /* RAMPaperSwitch.swift */; };
 		A42255932245866F00C937D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42255922245866F00C937D3 /* AppDelegate.swift */; };
 		A42255952245866F00C937D3 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = A42255942245866F00C937D3 /* art.scnassets */; };
 		A42255972245866F00C937D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42255962245866F00C937D3 /* ViewController.swift */; };
@@ -57,6 +58,7 @@
 		A41041EE224706E600EA4D40 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A41041F322470D5500EA4D40 /* TagNodesInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagNodesInView.swift; sourceTree = "<group>"; };
 		A41041F522471C4000EA4D40 /* InfoNodesInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoNodesInView.swift; sourceTree = "<group>"; };
+		A41041F9224761AA00EA4D40 /* RAMPaperSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMPaperSwitch.swift; sourceTree = "<group>"; };
 		A422558F2245866F00C937D3 /* ML_AR_UI_Kit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ML_AR_UI_Kit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A42255922245866F00C937D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A42255942245866F00C937D3 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		A41041F222470B3500EA4D40 /* NodesViews */ = {
 			isa = PBXGroup;
 			children = (
+				A41041F9224761AA00EA4D40 /* RAMPaperSwitch.swift */,
 				A41041EA2246A7AA00EA4D40 /* InfoNodeView.xib */,
 				A422562D22466ECD00C937D3 /* TagNodeView.xib */,
 			);
@@ -473,6 +476,7 @@
 				A42255C722458D9600C937D3 /* Inceptionv3.mlmodel in Sources */,
 				A41041F622471C4000EA4D40 /* InfoNodesInView.swift in Sources */,
 				A42255C5224589BF00C937D3 /* StatusViewController.swift in Sources */,
+				A41041FA224761AA00EA4D40 /* RAMPaperSwitch.swift in Sources */,
 				A41041EF224706E600EA4D40 /* Extensions.swift in Sources */,
 				A42255932245866F00C937D3 /* AppDelegate.swift in Sources */,
 				A41041ED2246A7BB00EA4D40 /* InfoNodeView.swift in Sources */,

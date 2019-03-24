@@ -15,6 +15,8 @@ class InfoNodeView: UINibView {
         return "InfoNodeView"
     }
     
+    @IBOutlet weak var paperSwitch1: RAMPaperSwitch!
+    
     @IBOutlet var contentView: UIView!
     
     @IBOutlet weak var textView: UITextView!
@@ -32,8 +34,27 @@ class InfoNodeView: UINibView {
             self.textView.text = self.descriptionText
             self.imageView.sd_setImage(with: URL(string: self.imageUrl)) { (image, error, cache, url) in }
         }
+        
+        self.setupPaperSwitch()
     }
     
+    func setupPaperSwitch() {
+        
+        self.paperSwitch1.animationDidStartClosure = {(onAnimation: Bool) in
+            
+            self.animateLabel(self.textView, onAnimation: onAnimation, duration: self.paperSwitch1.duration)
+            
+        }
+           
+        
+    }
+    
+    func animateLabel(_ label: UITextView, onAnimation: Bool, duration: TimeInterval) {
+        UIView.transition(with: label, duration: duration, options: UIView.AnimationOptions.transitionCrossDissolve, animations: {
+            label.textColor = onAnimation ? UIColor.white : UIColor.black
+        }, completion:nil)
+    }
+
  
     @IBAction func remove(_ sender: Any) {
         

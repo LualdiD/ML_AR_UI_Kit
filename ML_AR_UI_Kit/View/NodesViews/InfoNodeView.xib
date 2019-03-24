@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="zP2-op-eFm"/>
                 <outlet property="imageView" destination="Ka1-Be-dBS" id="XKR-tj-B3H"/>
+                <outlet property="paperSwitch1" destination="LpI-2g-UEd" id="reh-M2-oaS"/>
                 <outlet property="textView" destination="yeY-mr-a8X" id="QiV-jt-EFj"/>
             </connections>
         </placeholder>
@@ -24,7 +25,7 @@
             <subviews>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yeY-mr-a8X">
                     <rect key="frame" x="12" y="220" width="596" height="190"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -35,6 +36,13 @@
                         <constraint firstAttribute="height" constant="200" id="bae-X3-li5"/>
                     </constraints>
                 </imageView>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LpI-2g-UEd" customClass="RAMPaperSwitch" customModule="PaperSwitchDemo" customModuleProvider="target">
+                    <rect key="frame" x="20" y="20" width="51" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="wd3-w7-Az6"/>
+                    </constraints>
+                    <color key="onTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </switch>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kgU-hD-paA">
                     <rect key="frame" x="0.0" y="430" width="620" height="48"/>
                     <subviews>
@@ -57,10 +65,12 @@
             <constraints>
                 <constraint firstItem="kgU-hD-paA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="JSS-VX-ryd"/>
                 <constraint firstItem="kgU-hD-paA" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="RWv-vY-Sg8"/>
+                <constraint firstItem="LpI-2g-UEd" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="T3g-RS-fKy"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yeY-mr-a8X" secondAttribute="trailing" constant="12" id="UQZ-l2-ats"/>
                 <constraint firstItem="Ka1-Be-dBS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Xj4-MD-Rzf"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ka1-Be-dBS" secondAttribute="trailing" id="auF-jg-F7B"/>
                 <constraint firstItem="yeY-mr-a8X" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="dTa-Nc-gMQ"/>
+                <constraint firstItem="LpI-2g-UEd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="fXM-eY-j8f"/>
                 <constraint firstItem="Ka1-Be-dBS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gjL-Pn-OUE"/>
                 <constraint firstItem="kgU-hD-paA" firstAttribute="top" secondItem="yeY-mr-a8X" secondAttribute="bottom" constant="20" id="szJ-kl-zcA"/>
                 <constraint firstItem="kgU-hD-paA" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="u0g-E1-QYy"/>
